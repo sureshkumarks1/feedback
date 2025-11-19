@@ -2,7 +2,8 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
-const feedbackRoute = require("./routes/feedbackRoute");
+const feedbackRoute = "./router/feedbackroute"
+
 const app = express();
 
 const MONGO_URI = process.env.MONGO_URI;
@@ -24,7 +25,7 @@ mongoose
   })
   .catch((err) => console.error(err));
 
-app.use("/api/feedback", feedbackRoute);
+app.use("/api/feedback", );
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
