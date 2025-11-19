@@ -25,7 +25,7 @@ mongoose
   })
   .catch((err) => console.error(err));
 
-app.use("/api/feedback", );
+app.use("/api/feedback", feedbackRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
