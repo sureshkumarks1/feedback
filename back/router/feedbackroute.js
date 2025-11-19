@@ -26,6 +26,9 @@ router.get("/all", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+router.get("/show", async (req, res) => {
+  res.send("Welcome to india")
+});
 
 /**
  * this route is created for deleting feedback

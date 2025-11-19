@@ -8,7 +8,7 @@ function App() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   axios.defaults.withCredentials = true;
-  const handleSubmit =  (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post(
@@ -20,8 +20,7 @@ function App() {
         },
         {
           headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers": "Content-Type",
+            "Content-Type": "application/json",
           },
         }
       )
