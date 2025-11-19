@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
-const feedbackRoute = "./router/feedbackroute"
+const userRouter = require("./router/feedbackroute")
 
 const app = express();
 
@@ -25,11 +25,13 @@ mongoose
   })
   .catch((err) => console.error(err));
 
-app.use("/api/feedback", feedbackRoute);
+
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+app.use("/api",userRouter)
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
