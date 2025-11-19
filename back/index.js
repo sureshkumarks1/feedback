@@ -8,12 +8,13 @@ const app = express();
 
 const MONGO_URI = process.env.MONGO_URI;
 const PORT = process.env.PORT || 5000;
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+
+app.use(cors({
+  origin: "https://feedback-front-qftd.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 if (!MONGO_URI) {
   throw new Error("Please define the MONGODB_URI environment variable");
