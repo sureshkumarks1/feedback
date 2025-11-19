@@ -12,7 +12,7 @@ function App() {
     e.preventDefault();
     axios
       .post(
-        "https://forvercel-back.vercel.app/register",
+        "https://feedback-8407.onrender.com/api/feedback/submit",
         {
           name,
           email,
